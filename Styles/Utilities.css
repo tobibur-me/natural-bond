@@ -1,0 +1,42 @@
+/* The larger bottom padding leaves room for the curved divider at the end of each section. */
+@utility section-y {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+  padding-bottom: clamp(5.5rem, 12vw, 11rem);
+}
+
+@utility card-surface {
+  background: var(--color-plate);
+  border: 1px solid rgb(11 77 43 / 0.1);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+@utility lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lift);
+    }
+  }
+}
+
+@utility pb-safe {
+  padding-bottom: max(0.625rem, env(safe-area-inset-bottom));
+}
+
+@utility field-control {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.75rem 1rem;
+  color: var(--color-ink);
+  background: var(--color-plate);
+  border: 1.5px solid rgb(11 77 43 / 0.28);
+  border-radius: 0.875rem;
+  transition: border-color 0.2s ease;
+
+  &::placeholder { color: rgb(32 52 41 / 0.72); }
+  &:focus { border-color: var(--color-forest); }
+  &[aria-invalid="true"] { border-color: var(--color-error); }
+}

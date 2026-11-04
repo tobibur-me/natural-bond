@@ -1,0 +1,31 @@
+@layer components {
+  .hero-backdrop {
+    background: radial-gradient(55% 60% at 80% 45%, rgb(242 193 78 / 0.3), transparent 70%);
+  }
+
+  .hero-arch {
+    border-radius: 999px 999px 2.25rem 2.25rem;
+    background: linear-gradient(170deg, var(--color-moss), var(--color-forest) 45%, var(--color-deep));
+    box-shadow: var(--shadow-lift);
+  }
+
+  .hero-arch-line {
+    border: 1.5px solid rgb(227 172 37 / 0.6);
+    border-radius: 999px 999px 2.25rem 2.25rem;
+  }
+
+  .bottle-glow {
+    background: radial-gradient(closest-side, rgb(242 193 78 / 0.62), transparent);
+  }
+
+  .floor-shadow {
+    background: radial-gradient(closest-side, rgb(2 22 12 / 0.7), transparent);
+  }
+
+  /* Sits behind transparent bottles, so they read as lit rather than pasted on. */
+  .glow-ground {
+    background: radial-gradient(60% 45% at 50% 50%, rgb(242 193 78 / 0.5), transparent), var(--color-moss);
+  }
+
+  .mask-arch { border-radius: 999px 999px 1.25rem 1.25rem; }
+}

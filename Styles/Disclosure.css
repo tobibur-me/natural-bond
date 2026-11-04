@@ -1,0 +1,45 @@
+/* Stops the page behind a modal from scrolling. */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+@layer components {
+  .faq-item > summary { list-style: none; }
+  .faq-item > summary::-webkit-details-marker { display: none; }
+
+  .faq-chevron { transition: transform 0.25s ease; }
+  .faq-item[open] .faq-chevron { transform: rotate(180deg); }
+
+  /* Older browsers skip this and simply open the answer without animating. */
+  @supports (interpolate-size: allow-keywords) {
+    .faq-item { interpolate-size: allow-keywords; }
+
+    .faq-item::details-content {
+      block-size: 0;
+      overflow: clip;
+      transition: block-size 0.3s ease, content-visibility 0.3s allow-discrete;
+    }
+
+    .faq-item[open]::details-content { block-size: auto; }
+  }
+
+  .sheet, .viewer {
+    position: fixed;
+    margin: 0;
+    height: 100dvh;
+    max-height: none;
+    max-width: none;
+  }
+
+  .sheet {
+    inset: 0 0 0 auto;
+    width: min(22rem, 88vw);
+    color: var(--color-forest);
+    background: var(--color-cream);
+  }
+
+  .viewer { inset: 0; width: 100dvw; overflow: hidden; color: var(--color-cream); background: transparent; }
+
+  .sheet::backdrop { background: rgb(6 57 31 / 0.55); }
+  .viewer::backdrop { background: rgb(4 34 19 / 0.94); }
+}

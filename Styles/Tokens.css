@@ -1,0 +1,39 @@
+@theme inline {
+  --color-forest: #0b4d2b;
+  --color-deep: #06391f;
+  --color-moss: #125c37;
+  --color-leaf: #4f8c30;
+  --color-gold: #e3ac25;
+  --color-sun: #f2c14e;
+  --color-cream: #fff9eb;
+  --color-paper: #fafaf6;
+  --color-ink: #203429;
+  --color-plate: #fefefc;
+  --color-error: #a8261c;
+
+  --font-sans:
+    var(--font-solaiman), "Brand Latin", "Noto Sans Bengali", "Kohinoor Bangla", "Nirmala UI", system-ui, sans-serif;
+
+  /* Larger than the Latin defaults, with room for Bengali vowel signs above and below the line. */
+  --text-sm: 1rem;
+  --text-sm--line-height: 1.55;
+  --text-base: 1.125rem;
+  --text-base--line-height: 1.65;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.65;
+  --text-xl: 1.4375rem;
+  --text-xl--line-height: 1.55;
+  --text-2xl: 1.75rem;
+  --text-2xl--line-height: 1.45;
+  --text-3xl: 2.125rem;
+  --text-3xl--line-height: 1.35;
+  --text-display: clamp(2.5rem, 5.8vw, 4.75rem);
+  --text-section: clamp(2rem, 4.4vw, 3.5rem);
+
+  --shadow-card: 0 18px 40px -26px rgb(6 57 31 / 0.4);
+  --shadow-lift: 0 28px 54px -26px rgb(2 22 12 / 0.75);
+  --shadow-glow: 0 16px 34px -18px rgb(227 172 37 / 0.85);
+
+  --radius-card: 1.5rem;
+  --radius-plate: 1.125rem;
+}

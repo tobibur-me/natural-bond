@@ -1,0 +1,41 @@
+/* Unlayered on purpose: the selected row must beat the utility styles around it. */
+.size-row {
+  border-radius: var(--radius-plate);
+  color: var(--color-deep);
+  background: var(--color-cream);
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+  .size-row:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+input:checked + .size-row {
+  background: var(--color-sun);
+  box-shadow: var(--shadow-glow);
+}
+
+input:focus-visible + .size-row {
+  outline: 3px solid var(--color-cream);
+  outline-offset: 3px;
+}
+
+.size-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--color-forest);
+  border-radius: 999px;
+  color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+input:checked + .size-row .size-dot {
+  background: var(--color-forest);
+  color: var(--color-sun);
+}

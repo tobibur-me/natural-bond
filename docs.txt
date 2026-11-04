@@ -1,0 +1,695 @@
+# Build a Premium Bengali Mustard Oil Landing Page — Natural Bond
+
+You are a senior frontend engineer, award-winning UI/UX designer, conversion rate optimization specialist, and GSAP animation expert.
+
+Build a complete, production-ready, premium-quality, responsive single-product landing page for **Natural Bond**, a Bangladeshi natural food brand.
+
+This website will sell ONLY mustard oil (সরিষার তেল). It is not a multiproduct e-commerce store.
+
+The primary objective is to convert visitors from Facebook and Instagram advertising into customer orders through **WhatsApp**, with phone calls as the secondary contact option.
+
+## 1. Brand Information
+
+- **Brand Name:** Natural Bond
+- **Product:** সরিষার তেল
+- **Business Type:** Online Natural Food Store
+- **Website:** https://naturalbond.shop
+- **WhatsApp Number:** 8801722527364
+- **Mobile Number:** 01722527364
+- **Address:** মোহাম্মদী হাউজিং সোসাইটি, ঢাকা-১২০৭, বাংলাদেশ
+- **Brand Tagline:** প্রকৃতির সঙ্গে, স্বাদের বন্ধনে।
+- **Secondary Tagline:** Pure • Healthy • For You
+
+Use the uploaded Natural Bond logo as the official brand identity.
+
+Do not redesign the logo, change its colors, or replace it with a generated logo.
+
+Use the uploaded mustard oil product images as the primary visual references.
+
+## 2. Technology Stack
+
+Build with:
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- GSAP
+- GSAP ScrollTrigger
+- Lucide React icons
+
+Use modern component-based architecture.
+
+Requirements:
+
+- Fully responsive, mobile-first design
+- Clean reusable React components
+- Semantic HTML5
+- Accessible form controls
+- Optimized images and lazy loading
+- Excellent performance
+- No unnecessary libraries
+- Production-ready source code
+- Smooth animations without layout shifts
+- Respect `prefers-reduced-motion`
+
+Use the official GSAP library and ScrollTrigger for animations.
+
+Reference: https://gsap.com/
+
+## 3. Bengali Language & Typography
+
+**IMPORTANT: All customer-facing website content must be in Bangla.**
+
+Use **SolaimanLipi** as the primary font family throughout the entire website.
+
+Font requirements:
+
+```css
+@font-face {
+  font-family: "SolaimanLipi";
+  src: url("/fonts/SolaimanLipi.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "SolaimanLipi", sans-serif;
+}
+```
+
+Assume the properly licensed SolaimanLipi font file will be provided in the public/fonts folder.
+
+Use a readable Bengali fallback font if the custom font cannot load.
+
+Do not download or embed unverified font files.
+
+All navigation, buttons, headings, labels, form validation messages, descriptions, FAQ content, and order information must be in Bengali.
+
+Brand name Natural Bond, domain names, and technical identifiers may remain in English.
+
+## 4. Premium Brand Color Palette
+
+Use an elegant, premium, organic color system:
+
+- Primary Forest Green: `#0B4D2B`
+- Dark Green: `#06391F`
+- Leaf Green: `#4F8C30`
+- Mustard Gold: `#E3AC25`
+- Warm Gold: `#F2C14E`
+- Cream Background: `#FFF9EB`
+- Soft Off-White: `#FAFAF6`
+- Dark Text: `#203429`
+
+Design direction:
+
+Premium natural food branding, modern Bengali typography, elegant spacing, subtle gradients, polished cards, soft shadows, premium product photography, warm golden accents, and organic decorative shapes.
+
+Avoid generic Bootstrap-looking layouts.
+
+Create an original visual identity inspired by premium food product campaigns.
+
+## 5. Landing Page Sections
+
+Build the sections in the following order.
+
+### SECTION 01 — Sticky Header
+
+Include:
+
+- Official Natural Bond logo
+- Navigation links:
+  - হোম
+  - আমাদের তেল
+  - কেন বেছে নেবেন
+  - ভিডিও
+  - অর্ডার করুন
+- WhatsApp contact icon
+- Mobile call icon
+- Primary CTA button: "এখনই অর্ডার করুন"
+
+Header behavior:
+
+- Transparent or light background initially
+- Subtle background change on scroll
+- Smooth section navigation
+- Mobile-friendly hamburger menu
+- GSAP entrance animation
+
+### SECTION 02 — Premium Hero Section
+
+Create a premium first-screen hero with a two-column desktop layout and mobile-optimized stacked layout.
+
+Left content:
+
+Small eyebrow label:
+
+"🌿 আপনার পরিবারের রান্নার জন্য"
+
+Main heading:
+
+"প্রতিদিনের রান্নায় ফিরুক সরিষার তেলের চেনা ঘ্রাণ"
+
+Highlight important words in mustard gold or leaf green.
+
+Supporting text:
+
+"ভর্তা, মাছের ঝোল কিংবা প্রতিদিনের দেশীয় রান্নায়—Natural Bond সরিষার তেলের স্বতন্ত্র ঘ্রাণে উপভোগ করুন পরিচিত স্বাদের আনন্দ।"
+
+Primary button:
+
+"🛒 এখনই অর্ডার করুন"
+
+Secondary button:
+
+"📞 সরাসরি কল করুন"
+
+Trust-oriented small text:
+
+"সহজ অর্ডার • WhatsApp যোগাযোগ • ঘরোয়া রান্নার চেনা স্বাদ"
+
+Right content:
+
+- Large premium mustard oil bottle image
+- Floating mustard flowers
+- Subtle golden oil droplet decorations
+- Soft radial glow
+- Elegant botanical leaf graphics
+- Premium background shapes
+- Gentle GSAP floating animation
+
+Hero GSAP sequence:
+
+1. Logo and heading fade upward
+2. Supporting text appears with slight delay
+3. Buttons animate into view
+4. Product bottle smoothly enters from below
+5. Decorative leaves have subtle floating animation
+
+Animation must not be excessive or distracting.
+
+### SECTION 03 — Product Size Selector
+
+Heading:
+
+"আপনার প্রয়োজন অনুযায়ী বেছে নিন"
+
+Subheading:
+
+"Natural Bond সরিষার তেল — আপনার পরিবারের জন্য পছন্দের পরিমাণ নির্বাচন করুন।"
+
+Provide three selectable product options:
+
+1. **১ লিটার**
+2. **২ লিটার**
+3. **৫ লিটার**
+
+Each option should appear as a premium selection card with:
+
+- Product size
+- Product image
+- Price in Bangladeshi Taka (৳)
+- Selected state
+- Hover effect
+- Selection animation
+
+Important pricing requirement:
+
+Do not invent real prices.
+
+Use a centralized editable product configuration with explicit `price: null` placeholders until actual prices are provided.
+
+If a price is missing, display:
+
+"দাম জানতে যোগাযোগ করুন"
+
+Never show fake discounts, fabricated prices, or misleading sale prices.
+
+When a size is selected:
+
+- Highlight its card
+- Update the order form selection
+- Update the product summary
+- Automatically synchronize the selected size with WhatsApp order information
+
+Allow multiple quantities using plus/minus buttons.
+
+Default quantity: 1.
+
+Minimum quantity: 1.
+
+Maximum quantity: 20.
+
+### SECTION 04 — Why Natural Bond
+
+Section heading:
+
+"কেন Natural Bond সরিষার তেল?"
+
+Create four premium feature cards.
+
+Suggested customer-facing content:
+
+1. **সরিষার চেনা ঘ্রাণ**
+   "দেশীয় রান্নার পরিচিত স্বাদ ও ঘ্রাণের জন্য সরিষার তেল।"
+
+2. **প্রতিদিনের রান্নায়**
+   "মাছ, ভর্তা ও বিভিন্ন দেশীয় খাবারে ব্যবহারযোগ্য।"
+
+3. **পরিবারের রান্নাঘরে**
+   "প্রতিদিনের খাবার প্রস্তুতিতে আপনার সঙ্গী।"
+
+4. **সহজ অর্ডার**
+   "WhatsApp কিংবা সরাসরি ফোনেই যোগাযোগ করুন।"
+
+Use elegant line icons.
+
+Animate cards with subtle GSAP staggered reveal.
+
+Avoid unsupported medical claims, product certifications, or laboratory purity claims.
+
+### SECTION 05 — Premium Product Image Gallery
+
+Heading:
+
+"আমাদের সরিষার তেল এক নজরে"
+
+Create a modern responsive image gallery.
+
+Features:
+
+- Product photography thumbnails
+- Large featured image
+- Click-to-view lightbox
+- Smooth transitions
+- Image zoom
+- Mobile swipe support
+- Desktop navigation arrows
+- Keyboard navigation
+- Proper image alt text in Bengali
+
+Gallery categories can include:
+
+- Product bottle
+- Product label
+- Mustard seeds
+- Cooking lifestyle photography
+- Product packaging
+
+Use actual uploaded product photos.
+
+If additional image files are not supplied, show clearly marked development placeholders rather than fabricated product photographs.
+
+Use GSAP only where it adds real visual value.
+
+### SECTION 06 — Cinematic Brand Story
+
+Heading:
+
+"মাটির ঘ্রাণে, মায়ের ভালোবাসায়"
+
+Create an emotional storytelling section inspired by rural Bangladesh.
+
+Content:
+
+"বাংলার সরিষার মাঠ, মায়ের হাতের রান্না আর পরিবারের একসঙ্গে খাওয়ার আনন্দ—এই পরিচিত অনুভূতিগুলোর সঙ্গেই আমাদের পথচলা।"
+
+Visual design:
+
+- Mustard flower field imagery
+- Warm Bengali home kitchen
+- Mother cooking
+- Family dining
+- Soft cream background
+- Elegant photography masks
+
+Use GSAP ScrollTrigger for subtle image reveals and parallax effects.
+
+Avoid excessive scrolling effects that harm mobile usability.
+
+### SECTION 07 — Promotional Video
+
+Heading:
+
+"ভিডিওতে দেখুন Natural Bond-এর গল্প"
+
+Include a premium video player.
+
+Features:
+
+- 60-second brand promotional video
+- Custom thumbnail
+- Play button overlay
+- Native video controls
+- Poster image
+- Mobile responsive playback
+- Video loading optimization
+
+Use a supplied local video file such as:
+
+`/videos/natural-bond-commercial.mp4`
+
+Do not autoplay with sound.
+
+Do not load a large video until the user interacts or when appropriate for performance.
+
+Below the video display:
+
+"প্রকৃতির সঙ্গে, স্বাদের বন্ধনে।"
+
+CTA button:
+
+"ভিডিও দেখে অর্ডার করুন"
+
+### SECTION 08 — Cooking Inspiration
+
+Heading:
+
+"দেশীয় রান্নায় সরিষার তেলের স্বাদ"
+
+Include three attractive cooking cards:
+
+- মাছের ঝোল
+- আলু ভর্তা
+- শাকসবজির রান্না
+
+Each card should have:
+
+- Authentic food photography
+- Bengali title
+- Short Bengali description
+- Subtle hover animation
+
+### SECTION 09 — Customer Order Form
+
+This is the most important conversion section.
+
+Heading:
+
+"আপনার অর্ডারটি দিন"
+
+Subheading:
+
+"নিচের তথ্য পূরণ করে WhatsApp-এ অর্ডার পাঠান।"
+
+Form fields:
+
+**Field 1 — Product Size**
+
+Label: "তেলের পরিমাণ নির্বাচন করুন"
+
+Options:
+
+- ১ লিটার
+- ২ লিটার
+- ৫ লিটার
+
+**Field 2 — Quantity**
+
+Label: "কতটি নিতে চান?"
+
+Provide plus and minus quantity buttons.
+
+**Field 3 — Customer Name**
+
+Label: "আপনার নাম"
+
+Placeholder: "আপনার সম্পূর্ণ নাম লিখুন"
+
+Required.
+
+**Field 4 — Mobile Number**
+
+Label: "মোবাইল নম্বর"
+
+Placeholder: "01XXXXXXXXX"
+
+Required.
+
+Validate Bangladeshi mobile number format.
+
+Accept either:
+
+- `01XXXXXXXXX`
+- `+8801XXXXXXXXX`
+
+Normalize the phone number for the WhatsApp message.
+
+**Field 5 — Delivery Address**
+
+Label: "সম্পূর্ণ ডেলিভারি ঠিকানা"
+
+Placeholder: "বাসা/রোড, এলাকা, থানা, জেলা লিখুন"
+
+Required.
+
+Use textarea.
+
+**Field 6 — Optional Notes**
+
+Label: "বিশেষ নির্দেশনা (ঐচ্ছিক)"
+
+Placeholder: "অর্ডার সম্পর্কে অতিরিক্ত কিছু জানাতে চাইলে লিখুন"
+
+Optional.
+
+### Order Summary
+
+Show:
+
+- Selected product
+- Selected size
+- Quantity
+- Unit price, if configured
+- Subtotal, if configured
+- Delivery charge, only if known
+- Total price, only if all relevant values are known
+
+Do not display a fabricated total when prices or delivery charges are unavailable.
+
+### WhatsApp Order Button
+
+Large green full-width button:
+
+"💬 WhatsApp-এ অর্ডার পাঠান"
+
+When clicked:
+
+1. Validate all required fields.
+2. Show Bengali validation errors when necessary.
+3. Generate a properly formatted Bengali WhatsApp message.
+4. Use `encodeURIComponent()` to encode the message.
+5. Open the official WhatsApp URL:
+   `https://wa.me/8801722527364?text=ENCODED_MESSAGE`
+6. Open in a new tab/window where supported.
+7. Never redirect to a payment gateway.
+8. Never claim the order has been confirmed merely because WhatsApp opened.
+
+WhatsApp message format:
+
+```
+🌿 নতুন অর্ডার — Natural Bond
+
+পণ্য: সরিষার তেল
+পরিমাণ: ১ লিটার
+সংখ্যা: ২টি
+
+গ্রাহকের নাম: [NAME]
+মোবাইল: [PHONE]
+ডেলিভারি ঠিকানা: [ADDRESS]
+
+বিশেষ নির্দেশনা: [OPTIONAL NOTES]
+
+মোট মূল্য: [ONLY IF KNOWN]
+
+আমি অর্ডারটি নিশ্চিত করতে চাই।
+ধন্যবাদ।
+```
+
+Use dynamic values instead of hardcoded examples.
+
+Also include a separate telephone button:
+
+"📞 সরাসরি কল করুন"
+
+Phone URL:
+
+`tel:+8801722527364`
+
+### SECTION 10 — Frequently Asked Questions
+
+Heading:
+
+"সাধারণ জিজ্ঞাসা"
+
+Create an animated accessible accordion.
+
+Include:
+
+- কীভাবে অর্ডার করব?
+- কোন কোন পরিমাণ পাওয়া যায়?
+- ডেলিভারি সম্পর্কে কীভাবে জানব?
+- অর্ডার নিশ্চিত হবে কীভাবে?
+- সরাসরি ফোন করে অর্ডার করা যাবে?
+
+Do not invent delivery charges, delivery timelines, payment methods, or refund policies.
+
+### SECTION 11 — Final Call to Action
+
+Create a premium full-width dark-green section.
+
+Heading:
+
+"আপনার রান্নাঘরে থাকুক দেশীয় স্বাদের ছোঁয়া"
+
+Supporting text:
+
+"Natural Bond সরিষার তেল সম্পর্কে জানতে কিংবা অর্ডার করতে আজই যোগাযোগ করুন।"
+
+Buttons:
+
+- "WhatsApp-এ অর্ডার করুন"
+- "সরাসরি কল করুন"
+
+Add subtle GSAP decorative leaf animations.
+
+### SECTION 12 — Footer
+
+Include:
+
+- Official Natural Bond logo
+- Short brand description in Bengali
+- Website address
+- WhatsApp number
+- Phone number
+- Business address
+- Facebook page link: https://www.facebook.com/naturalbond25
+- Copyright with dynamic current year
+
+Footer text:
+
+"© Natural Bond — সর্বস্বত্ব সংরক্ষিত।"
+
+## 6. Floating Mobile Order Bar
+
+On mobile devices, display a sticky bottom conversion bar when the user scrolls beyond the hero section.
+
+Two buttons:
+
+- "📞 কল করুন"
+- "🛒 অর্ডার করুন"
+
+The order button should smoothly scroll to the order form.
+
+Use safe-area padding for modern mobile devices.
+
+Do not obstruct form controls or the footer.
+
+## 7. GSAP Animation Requirements
+
+Use GSAP for:
+
+- Hero entrance animations
+- Product bottle floating
+- Section heading reveal
+- Product selection micro-interactions
+- Feature card stagger animations
+- Image gallery transitions
+- ScrollTrigger-based section entrance effects
+- Subtle image parallax
+- CTA reveal animation
+
+Important:
+
+- Register ScrollTrigger correctly.
+- Clean up GSAP animations during component unmount.
+- Avoid animating layout properties when transforms can be used.
+- Respect reduced-motion preferences.
+- Avoid excessive scroll-jacking.
+- Keep animation smooth on low-end Android phones.
+- Prioritize mobile usability and conversion performance.
+
+## 8. SEO Requirements
+
+Page title:
+
+"Natural Bond সরিষার তেল | অনলাইনে অর্ডার করুন"
+
+Meta description:
+
+"Natural Bond সরিষার তেল সম্পর্কে জানুন। ১, ২ ও ৫ লিটারের পণ্য নির্বাচন করে WhatsApp বা ফোনে সহজেই যোগাযোগ করুন।"
+
+Requirements:
+
+- Proper heading structure
+- `lang="bn"`
+- Open Graph metadata
+- Facebook sharing preview
+- Canonical URL
+- Responsive images
+- Descriptive Bengali image alt text
+- Product structured data only for verified real product details
+- No fabricated ratings or reviews
+
+## 9. Accessibility & UX
+
+- Accessible labels
+- Clear focus states
+- Keyboard navigation
+- Large mobile touch targets
+- High color contrast
+- Friendly Bengali validation messages
+- Visible loading states
+- No horizontal scrolling
+- Responsive designs for 360px to 1920px screens
+
+## 10. Central Configuration
+
+Create one centralized configuration file for:
+
+- Brand name
+- WhatsApp number
+- Phone number
+- Website URL
+- Address
+- Facebook URL
+- Product sizes
+- Prices
+- Delivery charge
+- Logo image
+- Product gallery images
+- Video URL
+
+Use editable placeholders for unknown prices, policies and product details.
+
+## 11. Deliverables
+
+Provide:
+
+1. Complete React + Vite + TypeScript project.
+2. Tailwind CSS integration.
+3. GSAP animations.
+4. Reusable UI components.
+5. Responsive Bengali landing page.
+6. Fully functional WhatsApp order form.
+7. Product image gallery.
+8. Promotional video section.
+9. Mobile sticky order buttons.
+10. README with setup instructions.
+11. Clear instructions explaining where to add product images, logo, font and video.
+12. Build commands and deployment instructions.
+
+Do not merely provide a wireframe or design description.
+
+Implement the full working landing page.
+
+If operating in a coding environment, create the actual project files, install dependencies when available, run the build, and fix any TypeScript or build errors.
+
+Prioritize excellent visual design, fast loading, accessibility and high conversion potential.
+
+The final website should feel like a premium Bengali natural food brand landing page, not a generic e-commerce template.
+
+
+Code style...
+
+Componet, file Maximum 50 lines, File, folder Naming conversion File name is PascalCase, const ComponentName = () => {.....}; export default; Infile types, dummay data no declaration.

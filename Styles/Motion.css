@@ -1,0 +1,41 @@
+/*
+ * Intro gate. Until GSAP takes over, hero items wait in their start state.
+ * The keyframes are a failsafe: if JavaScript is slow or blocked, everything still appears.
+ * No-JS and reduced-motion visitors never see the gate.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.motion-live) [data-intro="fade"] {
+    opacity: 0;
+    animation: intro-failsafe 0.4s ease 1.8s forwards;
+  }
+
+  html:not(.motion-live) [data-intro="settle"] {
+    transform: translateY(14px);
+    animation: intro-failsafe 0.4s ease 1.8s forwards;
+  }
+}
+
+@keyframes intro-failsafe {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.mobile-bar {
+  box-shadow: 0 -12px 28px -20px rgb(6 57 31 / 0.7);
+  transition: transform 0.28s ease;
+}
+
+.mobile-bar[data-visible="false"] {
+  transform: translateY(110%);
+}
+
+.site-header {
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.site-header[data-scrolled="true"] {
+  background: var(--color-cream);
+  box-shadow: 0 10px 26px -22px rgb(6 57 31 / 0.65);
+}

@@ -1,0 +1,46 @@
+/* Unlayered on purpose: a selected state must beat the utility styles around it. */
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: var(--color-plate);
+  box-shadow: 0 0 0 1px rgb(11 77 43 / 0.15);
+}
+
+.size-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 0.25rem;
+  border: 1.5px solid rgb(11 77 43 / 0.3);
+  border-radius: 0.875rem;
+  color: var(--color-forest);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  text-align: center;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+input:checked + .size-pill {
+  border-color: var(--color-forest);
+  background: var(--color-forest);
+  color: var(--color-cream);
+}
+
+input:focus-visible + .size-pill {
+  outline: 3px solid var(--color-forest);
+  outline-offset: 3px;
+}
+
+.note-field > summary {
+  list-style: none;
+  color: var(--color-forest);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.note-field > summary::-webkit-details-marker { display: none; }
