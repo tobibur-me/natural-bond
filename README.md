@@ -67,6 +67,8 @@ To remove the poster from the gallery, delete its line from `gallery` in `Config
 
 Image compression needs a running Node.js server, so use a host that supports Next.js.
 
+The build uses webpack (`next build --webpack`). Turbopack runs PostCSS in a separate `node` process, and that process failing on a host crashes the build with "node process exited before we could connect to it". If your host has its own build command setting, make sure it runs `pnpm build` and not plain `next build`.
+
 **Vercel:** import the repository and deploy. The defaults work as they are.
 
 **Your own Node.js server:**
