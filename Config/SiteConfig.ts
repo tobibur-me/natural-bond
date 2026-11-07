@@ -29,12 +29,12 @@ const siteConfig: SiteConfigShape = {
   shareImage: { src: "/images/Derived/OgCover.jpg", width: 1200, height: 630, alt: one.alt },
   sizes: [
     { id: "1l", label: "১ লিটার", liters: 1, price: 280, image: one },
-    { id: "2l", label: "২ লিটার", liters: 2, price: 520, image: two },
+    { id: "2l", label: "২ লিটার", liters: 2, price: 550, image: two },
     { id: "5l", label: "৫ লিটার", liters: 5, price: 1250, image: five },
   ],
   delivery: [
-    { id: "inside", label: "ঢাকার ভিতরে", charge: 100 },
-    { id: "outside", label: "ঢাকার বাইরে", charge: 200 },
+    { id: "inside", label: "ঢাকার ভিতরে", charge: 60 },
+    { id: "outside", label: "ঢাকার বাইরে", charge: 120 },
   ],
   quantity: { min: 1, max: 20, initial: 1 },
   gallery: [
